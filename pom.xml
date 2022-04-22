@@ -21,7 +21,7 @@
   <groupId>com.twitter.penguin</groupId>
   <artifactId>korean-text</artifactId>
   <packaging>jar</packaging>
-  <version>4.4.5-SNAPSHOT</version>
+  <version>4.4.6</version>
   <name>Korean Text Processing Utilities</name>
   <url>https://github.com/twitter/twitter-korean-text</url>
   <description>Scala library to process Korean text</description>
@@ -39,7 +39,7 @@
     <connection>scm:git:https://github.com/twitter/twitter-korean-text.git</connection>
     <developerConnection>scm:git:git@github.com:twitter/twitter-korean-text.git
     </developerConnection>
-    <tag>korean-text-4.4.4</tag>
+    <tag>korean-text-4.4.6</tag>
   </scm>
   <prerequisites>
     <maven>3.0.4</maven>
@@ -65,15 +65,10 @@
     <encoding>UTF-8</encoding>
   </properties>
   <distributionManagement>
-    <snapshotRepository>
-      <id>sonatype-nexus-snapshots</id>
-      <name>Sonatype Nexus Snapshots</name>
-      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-    </snapshotRepository>
     <repository>
-      <id>sonatype-nexus-staging</id>
-      <name>Nexus Release Repository</name>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+      <id>jboss-mixed-repository</id>
+      <name>JBoss Mixed Repository</name>
+      <url>https://maven.meback.ai/repository/maven-mixed/</url>
     </repository>
   </distributionManagement>
   <dependencies>
@@ -81,6 +76,11 @@
       <groupId>org.scala-lang</groupId>
       <artifactId>scala-library</artifactId>
       <version>${scala.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.scala-lang.modules</groupId>
+      <artifactId>scala-xml_2.11</artifactId>
+      <version>1.0.5</version>
     </dependency>
     <dependency>
       <groupId>com.twitter</groupId>
@@ -96,7 +96,7 @@
     <dependency>
       <groupId>org.scalatest</groupId>
       <artifactId>scalatest_2.11</artifactId>
-      <version>2.2.4</version>
+      <version>2.2.6</version>
       <scope>test</scope>
     </dependency>
     <dependency>
